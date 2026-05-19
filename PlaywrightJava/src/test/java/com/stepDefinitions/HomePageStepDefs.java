@@ -69,7 +69,7 @@ public class HomePageStepDefs {
 	@When("Click on {string} button")
 	public void click_on_button(String buttonName) {
 		if (buttonName.contains(ConfigConstants.SignupLogin)) {
-			home.clickOnLogin();
+			home.clickOnLoginLink();
 		} else if (buttonName.contains(ConfigConstants.Signupbutton)) {
 			home.clickSignUpButton();
 		} else if (buttonName.contains(ConfigConstants.text3)) {
@@ -78,6 +78,8 @@ public class HomePageStepDefs {
 			home.clickContinueButton();
 		} else if (buttonName.contains(ConfigConstants.text5)) {
 			home.clickDeleteAccountButton();
+		} else if (buttonName.contains(ConfigConstants.text10)) {
+			home.clickOnLogin();
 		}
 
 	}
@@ -85,7 +87,7 @@ public class HomePageStepDefs {
 	@Then("Enter name and email address as {int}")
 	public void enter_name_and_email_address_as(Integer i) throws IOException, ParseException {
 		home.enterUsername(JsonDataManager.readData("userCredentials", i).get("username"));
-		home.enterEmail(JsonDataManager.readData("userCredentials", i).get("emailAddress"));
+		home.enterSiginUpEmail(JsonDataManager.readData("userCredentials", i).get("emailAddress"));
 	}
 
 	@Then("Verify that {string} is visible")
@@ -122,4 +124,9 @@ public class HomePageStepDefs {
 		home.enterMobileNumber(JsonDataManager.readData("AddressDetails", i).get("MobilePhone"));
 	}
 
+	@Then("Enter correct name and email address as {int}")
+	public void enter_correct_name_and_email_address_as(Integer i) throws IOException, ParseException {
+		home.enterLoginEmail(JsonDataManager.readData("userCredentials", i).get("emailAddress"));
+		home.enterPassword(JsonDataManager.readData("userCredentials", i).get("password"));
+	}
 }

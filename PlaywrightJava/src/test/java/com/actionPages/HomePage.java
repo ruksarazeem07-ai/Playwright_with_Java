@@ -54,10 +54,21 @@ public class HomePage extends BasePage {
 		}
 	}
 
-	public void enterEmail(String email) {
+	public void enterSiginUpEmail(String email) {
 		try {
 			page.waitForSelector(HomePageElementsLocators.Email);
 			type(HomePageElementsLocators.Email, email);
+		} catch (Exception e) {
+
+			Assert.fail("Unable to enter EmailAddress " + e);
+
+		}
+	}
+	
+	public void enterLoginEmail(String email) {
+		try {
+			page.waitForSelector(HomePageElementsLocators.loginMail);
+			type(HomePageElementsLocators.loginMail, email);
 		} catch (Exception e) {
 
 			Assert.fail("Unable to enter EmailAddress " + e);
@@ -195,10 +206,20 @@ public class HomePage extends BasePage {
 		}
 	}
 
-	public void clickOnLogin() {
+	public void clickOnLoginLink() {
 		try {
 			page.waitForSelector(HomePageElementsLocators.SignUp_LOGIN_Link);
 			click(HomePageElementsLocators.SignUp_LOGIN_Link);
+		} catch (Exception e) {
+
+			Assert.fail("Unable to click on button" + e);
+		}
+	}
+	
+	public void clickOnLogin() {
+		try {
+			page.waitForSelector(HomePageElementsLocators.LoginBtn);
+			click(HomePageElementsLocators.LoginBtn);
 		} catch (Exception e) {
 
 			Assert.fail("Unable to click on button" + e);
@@ -294,7 +315,13 @@ public class HomePage extends BasePage {
 				Assert.assertEquals("Text mismatch!", text, actualText.trim());
 				assertThat(page.locator(HomePageElementsLocators.text5)).isVisible();
 				System.out.println("Expected: " + text + " | Actual: " + actualText);
-			} else {
+			} else if (text.contains(ConfigConstants.text9)){
+				page.waitForSelector(HomePageElementsLocators.text6);
+				String actualText = page.locator(HomePageElementsLocators.text6).innerText();
+				Assert.assertEquals("Text mismatch!", text, actualText.trim());
+				assertThat(page.locator(HomePageElementsLocators.text6)).isVisible();
+				System.out.println("Expected: " + text + " | Actual: " + actualText);
+			}else {
 				Assert.fail("Text not recognized: " + text);
 			}
 		} catch (Exception e) {

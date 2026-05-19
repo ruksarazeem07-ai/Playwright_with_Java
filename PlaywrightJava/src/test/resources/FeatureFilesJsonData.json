@@ -3,7 +3,11 @@
         {
             "username": "Ruksar",
             "emailAddress": "ruksarazeem1@gmail.com"
-        }
+        },
+		{
+			"emailAddress": "ruksarazeem@gmail.com",
+			"password": "Ruksar@2001"
+		}
     ],
     "RegistrationDetails": [
         {

@@ -16,5 +16,7 @@ public class ConfigConstants {
 	public static String text6 = "ACCOUNT CREATED!";
 	public static String text7 = " Logged in as ";
 	public static String text8 = "ACCOUNT DELETED!";
+	public static String text9 = "Login to your account";
+	public static String text10 = "login";
 
 }

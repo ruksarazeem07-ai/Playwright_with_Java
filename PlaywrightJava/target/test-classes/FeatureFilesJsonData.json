@@ -1,0 +1,38 @@
+{
+    "userCredentials": [
+        {
+            "username": "Ruksar",
+            "emailAddress": "ruksarazeem1@gmail.com"
+        }
+    ],
+    "RegistrationDetails": [
+        {
+            "Title": "Mrs.",
+            "Name": "Ruksar",
+            "Email": "ruksarazeem1@gmail.com",
+            "Password": "Ruksar@2001",
+			"Title": "Mrs."
+        }
+    ],
+	"dateOfBirth": [
+	    {
+	      "day": "29",
+	      "month": "6",
+	      "year": "2001"
+	    }
+	  ],
+	  "AddressDetails": [
+        {
+          "FirstName": "Ruksar",
+          "LastName": "Azeem",
+          "Company": "TechnoSoft",
+          "Address1": "123 Main Street",
+          "Address2": "Apt 4B",
+          "City": "Hyderabad",
+          "State": "Telangana",
+          "Zipcode": "500003",
+          "Country": "India",
+          "MobilePhone": "+92 300 7654321"
+        }
+      ]
+}

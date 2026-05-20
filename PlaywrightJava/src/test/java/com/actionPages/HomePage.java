@@ -321,7 +321,14 @@ public class HomePage extends BasePage {
 				Assert.assertEquals("Text mismatch!", text, actualText.trim());
 				assertThat(page.locator(HomePageElementsLocators.text6)).isVisible();
 				System.out.println("Expected: " + text + " | Actual: " + actualText);
-			}else {
+			}else if (text.contains(ConfigConstants.text11)){
+				page.waitForSelector(HomePageElementsLocators.text7);
+				String actualText = page.locator(HomePageElementsLocators.text7).innerText();
+				Assert.assertEquals("Text mismatch!", text, actualText.trim());
+				assertThat(page.locator(HomePageElementsLocators.text7)).isVisible();
+				System.out.println("Expected: " + text + " | Actual: " + actualText);
+			}
+			else {
 				Assert.fail("Text not recognized: " + text);
 			}
 		} catch (Exception e) {

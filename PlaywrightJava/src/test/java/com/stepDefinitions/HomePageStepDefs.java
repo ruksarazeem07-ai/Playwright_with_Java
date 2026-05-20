@@ -129,4 +129,11 @@ public class HomePageStepDefs {
 		home.enterLoginEmail(JsonDataManager.readData("userCredentials", i).get("emailAddress"));
 		home.enterPassword(JsonDataManager.readData("userCredentials", i).get("password"));
 	}
+
+	@Then("Enter incorrect email address and password as {int}")
+	public void enter_incorrect_email_address_and_password_as(Integer i) throws IOException, ParseException {
+		home.enterLoginEmail(JsonDataManager.readData("userCredentials", i).get("emailAddress"));
+		home.enterPassword(JsonDataManager.readData("userCredentials", i).get("password"));
+	}
+
 }

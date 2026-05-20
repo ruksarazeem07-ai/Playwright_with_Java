@@ -18,6 +18,7 @@ public class HomePageElementsLocators {
 	public static String text4 = "//a[contains(text(),'Logged in as')]";
 	public static String text5 = "//b[text()='Account Deleted!']";
 	public static String text6 = "//h2[text()='Login to your account']";
+	public static String text7 = "//p[contains(text(), 'Your email or password is incorrect')]";
 	public static String date = "//select[@id='days']";
 	public static String month = "//select[@id='months']";
 	public static String years = "//select[@id='years']";
@@ -38,6 +39,5 @@ public class HomePageElementsLocators {
 	public static final String ContinueBtn = "//a[@data-qa='continue-button']";
 	public static final String DeleteAccountBtn = "//a[@href='/delete_account']";
 	public static final String LogoutBtn = "//a[@href='/logout']";
-	
-	
+
 }

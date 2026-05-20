@@ -18,5 +18,6 @@ public class ConfigConstants {
 	public static String text8 = "ACCOUNT DELETED!";
 	public static String text9 = "Login to your account";
 	public static String text10 = "login";
+	public static String text11 = "Your email or password is incorrect!";
 
 }

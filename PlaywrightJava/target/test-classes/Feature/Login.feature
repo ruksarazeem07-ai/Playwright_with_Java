@@ -31,3 +31,10 @@ Feature: Login to the application
     And Click on 'login' button
     Then Verify that ' Logged in as ' is visible
 
+  Scenario: 003_Login_User_with_incorrect_email_and_password
+    Then Verify that home page is visible successfully
+    When Click on 'Signup / Login' button
+    Then Verify that 'Login to your account' is visible
+    Then Enter incorrect email address and password as 2
+    And Click on 'login' button
+    Then Verify that 'Your email or password is incorrect!' is visible

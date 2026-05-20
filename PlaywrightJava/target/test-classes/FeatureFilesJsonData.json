@@ -7,7 +7,12 @@
 		{
 			"emailAddress": "ruksarazeem@gmail.com",
 			"password": "Ruksar@2001"
+		},		
+		{
+			"emailAddress": "ruksarazeem2@gmail.com",
+			"password": "Ruksar@2001"
 		}
+		
     ],
     "RegistrationDetails": [
         {

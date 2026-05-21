@@ -8,6 +8,7 @@
 	<properties>
 		<maven.compiler.target>21</maven.compiler.target>
 		<maven.compiler.source>21</maven.compiler.source>
+		<allure.results.directory>target/allure-results</allure.results.directory>
 	</properties>
 	<build>
 		<plugins>
@@ -23,6 +24,12 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.2.5</version>
+				<configuration>
+					<systemPropertyVariables>
+						<allure.results.directory>target/allure-results</allure.results.directory>
+						<playwright.cli.skipBrowserDownload>false</playwright.cli.skipBrowserDownload>
+					</systemPropertyVariables>
+				</configuration>
 			</plugin>
 			<!-- Allure Maven Plugin -->
 			<plugin>

@@ -8,7 +8,7 @@
 	<properties>
 		<maven.compiler.target>21</maven.compiler.target>
 		<maven.compiler.source>21</maven.compiler.source>
-		<allure.results.directory>target/allure-results</allure.results.directory>
+		<allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
 	</properties>
 	<build>
 		<plugins>
@@ -20,13 +20,27 @@
 					<target>21</target>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.2.5</version>
 				<configuration>
 					<systemPropertyVariables>
 						<allure.results.directory>target/allure-results</allure.results.directory>
+						<playwright.cli.skipBrowserDownload>false</playwright.cli.skipBrowserDownload>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin> -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<!-- THIS IS THE FIX — tells Surefire to pick up your runner -->
+					<includes>
+						<include>**/JunitTestRunner.java</include>
+					</includes>
+					<systemPropertyVariables>
 						<playwright.cli.skipBrowserDownload>false</playwright.cli.skipBrowserDownload>
 					</systemPropertyVariables>
 				</configuration>
@@ -145,6 +159,12 @@
 			<groupId>io.qameta.allure</groupId>
 			<artifactId>allure-junit4</artifactId>
 			<version>2.25.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.9.22</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>

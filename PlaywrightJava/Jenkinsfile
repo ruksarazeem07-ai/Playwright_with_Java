@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    tools {
+        maven 'Maven-3.9'
+        jdk   'JDK-21'
+    }
+    stages {
+        stage('Checkout') {
+            steps { checkout scm }
+        }
+        stage('Run Tests') {
+            steps {
+                dir('PlaywrightJava') {   // ← points to your subfolder
+                    sh 'mvn clean test'
+                }
+            }
+        }
+        stage('Allure Report') {
+            steps {
+                allure([
+                    results: [[path: 'PlaywrightJava/target/allure-results']]
+                ])
+            }
+        }
+    }
+}

@@ -24,7 +24,17 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.2.5</version>
 			</plugin>
+			<!-- Allure Maven Plugin -->
+			<plugin>
+				<groupId>io.qameta.allure</groupId>
+				<artifactId>allure-maven</artifactId>
+				<version>2.12.0</version>
+				<configuration>
+					<reportVersion>2.25.0</reportVersion>
+				</configuration>
+			</plugin>
 		</plugins>
+
 	</build>
 
 	<!-- Playwright browser install: run only via: mvn test -P
@@ -115,6 +125,19 @@
 			<groupId>tech.grasshopper</groupId>
 			<artifactId>extentreports-cucumber7-adapter</artifactId>
 			<version>1.14.0</version>
+		</dependency>
+		<!-- Allure Cucumber7 -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-cucumber7-jvm</artifactId>
+			<version>2.25.0</version>
+		</dependency>
+
+		<!-- Allure JUnit4 -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-junit4</artifactId>
+			<version>2.25.0</version>
 		</dependency>
 	</dependencies>
 </project>

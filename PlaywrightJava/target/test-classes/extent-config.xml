@@ -14,10 +14,10 @@
         <protocol>https</protocol>
         
         <!-- title of the document -->
-        <documentTitle>Spirit Halloween Automation Report</documentTitle>
+        <documentTitle>Playwright Java Automation Report</documentTitle>
         
         <!-- report name - displayed at top-nav -->
-        <reportName>Spirit Halloween Automation Report</reportName>
+        <reportName>Playwright Java Automation Report</reportName>
         
         <!-- location of charts in the test view -->
         <!-- top, bottom -->

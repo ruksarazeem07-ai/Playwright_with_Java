@@ -5,11 +5,10 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = { "pretty",
-		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }, features = {
-				"src/test/resources/Feature/Login.feature" },
+@CucumberOptions(plugin = { "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+		"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" }, features = { "src/test/resources/Feature/Login.feature" },
 //		features = "@target/failedrerun.txt", 
-		glue = {"com.stepDefinitions","utils"}, monochrome = true, dryRun = false
+		glue = { "com.stepDefinitions", "utils" }, monochrome = true, dryRun = false
 //		,tags = "@012"
 )
 

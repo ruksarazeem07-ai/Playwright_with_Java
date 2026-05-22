@@ -1,25 +1,24 @@
 {
     "userCredentials": [
         {
-            "username": "Ruksar",
-            "emailAddress": "ruksarazeem1@gmail.com"
+            "username": "TestUser",
+            "emailAddress": "practiceautomation1@gmail.com"
         },
 		{
-			"emailAddress": "ruksarazeem@gmail.com",
-			"password": "Ruksar@2001"
+			"emailAddress": "practiceautomation@gmail.com",
+			"password": "Test@2026"
 		},		
 		{
-			"emailAddress": "ruksarazeem2@gmail.com",
-			"password": "Ruksar@2001"
-		}
-		
+			"emailAddress": "practiceautomation@gmail.com",
+			"password": "Test@2025"
+		},		
     ],
     "RegistrationDetails": [
         {
             "Title": "Mrs.",
-            "Name": "Ruksar",
-            "Email": "ruksarazeem1@gmail.com",
-            "Password": "Ruksar@2001",
+            "Name": "Test",
+            "Email": "practiceautomation1@gmail.com",
+            "Password": "Test@2026",
 			"Title": "Mrs."
         }
     ],
@@ -32,8 +31,8 @@
 	  ],
 	  "AddressDetails": [
         {
-          "FirstName": "Ruksar",
-          "LastName": "Azeem",
+          "FirstName": "Test",
+          "LastName": "User",
           "Company": "TechnoSoft",
           "Address1": "123 Main Street",
           "Address2": "Apt 4B",

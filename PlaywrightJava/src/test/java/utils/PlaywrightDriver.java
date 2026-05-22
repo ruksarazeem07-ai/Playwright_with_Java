@@ -93,6 +93,8 @@ public class PlaywrightDriver {
 			browser = getPlaywright().firefox()
 					.launch(new BrowserType.LaunchOptions().setChannel("firefox").setHeadless(false));
 
+		} else if (config.getProperty("browser").equals("webkit")) {
+			browser = getPlaywright().webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
 		}
 
 		br.set(browser);

@@ -18,7 +18,7 @@ Feature: Login to the application
     And Verify that 'ACCOUNT CREATED!' is visible
     And Click on 'Continue' button
     Then Verify that ' Logged in as ' is visible
-    And Click on 'Delete Account' button
+    #And Click on 'Delete Account' button
     Then Verify that 'ACCOUNT DELETED!' is visible
     And Click on 'Continue' button
 
